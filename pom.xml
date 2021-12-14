@@ -57,12 +57,20 @@
 	</dependencies>
 
 	<build>
-		<plugins>
+		<plugins>		
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
+        <groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+    </plugin>
+    <plugin>  
+        <groupId>org.apache.maven.plugins</groupId>  
+        <artifactId>maven-surefire-plugin</artifactId>  
+         <configuration>  
+          <skipTests>true</skipTests>  
+        </configuration>  
+</plugin>
 		</plugins>
+		
 		<finalName>docker-spring-boot</finalName>
 	</build>
 
